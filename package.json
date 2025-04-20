@@ -4,6 +4,8 @@
     "description": "webautomation testing framework",
     "scripts": {
         "start": "mocha tests/sauce.js --recursive --timeout 50000",
+        "start-loginonly": "mocha tests/sauce.js --grep 'Login' --recursive --timeout 50000",
+        "paralel": "mocha tests/sauce.js --parallel --recursive --timeout 50000",
         "report-mocha": "mocha tests --recursive --timeout 50000 --reporter mochawesome",
         "report-html": "mocha tests --recursive --timeout 50000 --reporter mocha-simple-html-reporter --reporter-options output=report.html"
     },
